@@ -9,7 +9,7 @@ class Source(Base):
         self.kind = 'directory'
 
     def gather_candidates(self, context):
-        cmd = ['fzf', '~vim-pluginlist/']
+        cmd = ['fzf', '~/vim-pluginlist/']
         return [{'word': path, 'action__path': path}
         for path
         in subprocess.run(cmd,
