@@ -16,7 +16,7 @@ class Kind(Base):
         '''
         for target in context['targets']:
             filepath = target['word']
-            filepath = "~/vim-denite-plugins/ReadMe" & str(filepath)
+            filepath = "~/vim-denite-plugins/ReadMe" + str(filepath)
             print(filepath + ' has ' + str(sum(1 for line in open(filepath, encoding='utf-8'))) + ' lines')
 
     def action_preview(self, context):
@@ -30,6 +30,6 @@ class Kind(Base):
         '''
         # context['targets'] に source側のgether_candidatesの返り値が格納されている
         filepath = context['targets'][0]['word']
-        filepath = "~/vim-denite-plugins/ReadMe" & str(filepath)
+        filepath = "~/vim-denite-plugins/ReadMe" + str(filepath)
         print(filepath + ' has ' + str(sum(1 for line in open(filepath, encoding='utf-8'))) + ' lines')
         return True
