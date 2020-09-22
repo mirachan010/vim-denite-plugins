@@ -29,7 +29,7 @@ class Kind(Base):
         return Trueとしないと，deniteが終了する
         '''
         # context['targets'] に source側のgether_candidatesの返り値が格納されている
-        filepath = context['targets'][0]['word']
+        filepath = context['targets']
         filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
         print(filepath)
         return True
