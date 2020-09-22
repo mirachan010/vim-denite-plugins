@@ -6,7 +6,7 @@ class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
         self.name = 'PluginsList'
-        self.kind = 'directory'
+        self.kind = 'text'
 
     def gather_candidates(self, context):
         cmd = ['cat', '~/vim-pluginlist/list']
