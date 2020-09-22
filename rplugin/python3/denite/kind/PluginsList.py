@@ -17,7 +17,7 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-            print(filepath + ' has ' + str(sum(1 for line in open(filepath, encoding='utf-8'))) + ' lines')
+            print(filepath)
 
     def action_preview(self, context):
         '''
