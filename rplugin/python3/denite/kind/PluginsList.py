@@ -10,6 +10,8 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             print(filepath)
+            filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
+            self._open(filepath,'edit')
 
     def action_preview(self, context):
         filepath = context['targets']
