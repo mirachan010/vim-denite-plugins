@@ -5,7 +5,7 @@ import subprocess
 class Source(Base):
     def __init__(self, vim):
         super().__init__(vim)
-        self.name = 'pluginslist'
+        self.name = 'PluginsList'
         self.kind = 'directory'
 
     def gather_candidates(self, context):
