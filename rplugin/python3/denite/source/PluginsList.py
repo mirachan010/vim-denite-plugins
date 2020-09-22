@@ -11,7 +11,7 @@ class Source(Base):
     def gather_candidates(self, context):
         cmd = ['cat', '~/vim-pluginlist/list']
         candidates = []
-        return [{'word': path, 'action__path': path}
+        return [{'word': path}
         for path in subprocess.run(cmd,
                 check=True,
                 universal_newlines=True,
