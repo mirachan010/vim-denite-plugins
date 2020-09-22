@@ -4,13 +4,13 @@ class Kind(Base):
     def __init__(self, vim):
         super().__init__(vim)
         # kindの名前．この名前をsourceで指定することにより，関連付けられる
-        self.name = 'pluginlist'
+        self.name = 'pluginslist'
         # デフォルトのアクション(候補上で<CR>を押下したときに実行するアクション)を指定する．
         # self.default_action = 'xxx' と指定すると，このクラスのメソッド:
         # action_xxx() が呼び出される
-        self.default_action = 'pluginlist'
+        self.default_action = 'pluginslist'
 
-        def action_pluginlist(self, context):
+        def action_pluginslist(self, context):
             '''
             コンストラクタで指定したように，デフォルトのアクションを記述する関数
             '''
