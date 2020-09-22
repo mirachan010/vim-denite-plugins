@@ -31,5 +31,5 @@ class Kind(Base):
         # context['targets'] に source側のgether_candidatesの返り値が格納されている
         filepath = context['targets'][0]['word']
         filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-        print(filepath + ' has ' + str(sum(1 for line in open(filepath, encoding='utf-8'))) + ' lines')
+        print(filepath)
         return True
