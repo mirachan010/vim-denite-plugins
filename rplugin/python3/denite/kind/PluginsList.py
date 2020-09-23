@@ -11,7 +11,7 @@ class Kind(Base):
             filepath = target['word']
             print(filepath)
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-            self.vim.command('buffer' + str(filepath))
+            self.vim.command('e ' + str(filepath))
 
     def action_preview(self, context):
         filepath = context['targets']
