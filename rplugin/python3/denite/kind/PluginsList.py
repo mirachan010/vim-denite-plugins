@@ -17,4 +17,4 @@ class Kind(Base):
             filepath = target['word']
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('ped ' + str(filepath))
-            return True
+        return True
