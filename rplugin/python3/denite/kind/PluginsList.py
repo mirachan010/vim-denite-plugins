@@ -12,9 +12,10 @@ class Kind(Base):
             print(filepath)
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('e ' + str(filepath))
+            self.vim.command('e ' + str(filepath))
 
     def action_preview(self, context):
         filepath = context['targets']
         filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-        print(str(filepath))
+        print("aaaa")
         return True
