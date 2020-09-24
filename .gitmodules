@@ -1,0 +1,3 @@
+[submodule "vim-pluginlist"]
+	path = vim-pluginlist
+	url = git@github.com:mirachan010/vim-pluginlist.git
