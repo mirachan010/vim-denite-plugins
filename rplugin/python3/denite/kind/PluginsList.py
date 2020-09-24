@@ -13,7 +13,7 @@ class Kind(Base):
             self.vim.command('e ' + str(filepath))
 
     def action_preview(self, context):
-        filepath = target['word']
+        filepath = context['word']
         filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
         self.vim.command('ped ' + str(filepath))
         return True
