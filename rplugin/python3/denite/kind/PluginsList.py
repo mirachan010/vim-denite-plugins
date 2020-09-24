@@ -13,7 +13,8 @@ class Kind(Base):
             self.vim.command('e ' + str(filepath))
 
     def action_preview(self, context):
-        filepath = context['word']
-        filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-        self.vim.command('ped ' + str(filepath))
+        for target in context['targets']:
+            filepath = target['word']
+            filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
+            self.vim.command('ped ' + str(filepath))
         return True
