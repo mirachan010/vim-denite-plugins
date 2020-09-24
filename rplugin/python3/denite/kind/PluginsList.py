@@ -17,5 +17,4 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-            self.vim.command('vs ' + str(filepath))
             self.vim.command('ped ' + str(filepath))
