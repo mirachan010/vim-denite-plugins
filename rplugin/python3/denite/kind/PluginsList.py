@@ -1,4 +1,5 @@
 from .base import Base
+import os
 
 class Kind(Base):
     def __init__(self, vim):
@@ -16,7 +17,7 @@ class Kind(Base):
     def action_preview(self, context):
         for target in context['targets']:
             filepath = target['word']
-            filepath = "../../../../vim-pluginlist/ReadMe/" + str(filepath)
+            filepath = str(os.getcwd()) + "../../../../vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('pclose!')
             self.vim.command('vs')
             self.vim.command('setl previewwindow')
