@@ -14,6 +14,9 @@ class Kind(Base):
             self.vim.command('e ~/list.toml')
             self.vim.command('pclose')
             self.action_append(context)
+            self.vim.command('s /$/\'')
+            self.vim.command('s /^/[[plugin]]\r')
+            self.vim.command('nohlsearch')
 
     def action_preview(self, context):
         for target in context['targets']:
