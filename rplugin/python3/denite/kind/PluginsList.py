@@ -12,7 +12,6 @@ class Kind(Base):
             filepath = target['word']
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('e ~/list.toml')
-            self.vim.command(self.end - self.start + 1)
             self.vim.command('pclose')
             self.action_append(context)
             self.vim.command('s /$/\'')
