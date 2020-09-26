@@ -11,8 +11,9 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
-            self.vim.command('e ' + str(filepath))
+            self.vim.command('e ~/list.toml')
             self.vim.command('pclose')
+             _paste(self.vim,target.get('action__text', target['word']), 'p', 'v')
 
     def action_preview(self, context):
         for target in context['targets']:
