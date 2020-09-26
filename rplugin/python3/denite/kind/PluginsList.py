@@ -12,10 +12,11 @@ class Kind(Base):
             filepath = target['word']
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('e ~/list.toml')
+            self.vim.command(__len__())
             self.vim.command('pclose')
             self.action_append(context)
             self.vim.command('s /$/\'')
-            self.vim.command('s /^/[[plugin]]\r')
+            self.vim.command('s /^/[[plugin]]\rrepo = \'')
             self.vim.command('nohlsearch')
 
     def action_preview(self, context):
