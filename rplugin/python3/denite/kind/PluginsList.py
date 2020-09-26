@@ -13,7 +13,7 @@ class Kind(Base):
             filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('e ~/list.toml')
             self.vim.command('pclose')
-             _paste(self.vim,target.get('action__text', target['word']), 'p', 'v')
+            self.action_append(context)
 
     def action_preview(self, context):
         for target in context['targets']:
