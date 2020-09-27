@@ -10,7 +10,6 @@ class Kind(Base):
     def action_pluginslist(self, context):
         for target in context['targets']:
             filepath = target['word']
-            filepath = "~/vim-pluginlist/ReadMe/" + str(filepath)
             self.vim.command('e ~/list.toml')
             self.vim.command('pclose')
             self.action_append(context)
