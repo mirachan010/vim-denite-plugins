@@ -13,7 +13,7 @@ class Source(Base):
         filepath = os.path.normpath(os.path.join(os.path.dirname(__file__), "../../../../vim-pluginlist/list")
         # cmd = ['cat', '\'' + str(filepath) + '\'']
         # cmd[1] = '\'' + str(filepath) + '\''
-        candidates = []
+        # candidates = []
         return [{'word': path}
         for path in subprocess.run(['cat', '\'' + str(filepath) + '\''],
                 check=True,
