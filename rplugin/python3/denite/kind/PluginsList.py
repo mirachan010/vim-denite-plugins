@@ -11,10 +11,11 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             self.vim.command('e ~/list.toml')
-            self.vim.command('pclose')
+            self.vim.command('pclose!')
+            self.vim.command('goto 1')
             self.action_append(context)
             self.vim.command('s /$/\'')
-            self.vim.command('s /^/[[plugin]]\rrepo = \'')
+            self.vim.command('s /^/\r[[plugin]]\rrepo = \'')
             self.vim.command('nohlsearch')
 
     def action_preview(self, context):
