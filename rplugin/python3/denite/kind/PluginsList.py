@@ -13,6 +13,7 @@ class Kind(Base):
             self.vim.command('e ~/list.toml')
             self.vim.command('pclose!')
             self.vim.command('goto 1')
+            self.vim.command('s /^/\r')
             self.action_append(context)
             self.vim.command('s /$/\'')
             self.vim.command('s /^/\r[[plugin]]\rrepo = \'')
