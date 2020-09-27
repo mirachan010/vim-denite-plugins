@@ -11,7 +11,8 @@ class Source(Base):
 
     def gather_candidates(self, context):
         filepath = os.path.normpath(os.path.join(os.path.dirname(__file__), "../../../../vim-pluginlist/list")
-        cmd = ['cat', filepath]
+        cmd = ['cat']
+        cmd[1] = '\'' + str(filepath) + '\''
         candidates = []
         return [{'word': path}
         for path in subprocess.run(cmd,
