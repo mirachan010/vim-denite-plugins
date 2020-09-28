@@ -11,7 +11,7 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             installpath = self.vim.command('get(g:, \'install_plugin_list\', \'~/list.toml\')')
-            self.vim.command('e ' + installpath)
+            self.vim.command('e ' + str(installpath))
             self.vim.command('pclose!')
             self.vim.command('goto 1')
             self.vim.command('s /^\[\[plugins\]\]/\r[[plugins]]')
