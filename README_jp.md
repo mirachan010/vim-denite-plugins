@@ -1,5 +1,5 @@
 # vim-denite-plugins
-[English](./README.md)
+[English](./README.md)  
 Use [pluginlist](https://github.com/mirachan010/vim-pluginlist) in denite.nvim
 like market for vim-plugins
 

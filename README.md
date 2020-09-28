@@ -1,5 +1,5 @@
 # vim-denite-plugins
-[にほんご](./README_jp.md)
+[にほんご](./README_jp.md)  
 [pluginlist](https://github.com/mirachan010/vim-pluginlist)をdenite経由で使える感じのやつ  
 これがあればvim内である程度のプラグインをさくっといれることができる。
 
