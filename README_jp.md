@@ -1,10 +1,10 @@
 # vim-denite-plugins
 [English](./README.md)  
-Use [pluginlist](https://github.com/mirachan010/vim-pluginlist) in denite.nvim
-like market for vim-plugins
+[pluginlist](https://github.com/mirachan010/vim-pluginlist)をdenite経由で使える感じのやつ  
+これがあればvim内である程度のプラグインをさくっといれることができる。
 
-## install
-use dein.vim
+## インストール方法
+dein.vimを使う場合
 ```toml
 [[plugins]]
 repo = 'mirachan010/vim-denite-plugins'
@@ -17,13 +17,12 @@ depentds = ['denite.nvim']
 on_source = ['vim-denite-plugins']
 ```
 
-## how to use
+## 使い方
 `:Denite PluginsList`
-if you do_action in denite.
-This plugin make ~/list.toml and write plugin name.
+Deniteでdo_actionを走らせた時、指定したファイルもしくは、~/list.tomlに貼り付けてくれる。
 
-## option
-default path is ~/list.toml
+## オプション
+デフォルトでは ~/list.toml　になるようになっています。
 ```
 g:install_plugin_list="path to tomlfiles"
 ```
