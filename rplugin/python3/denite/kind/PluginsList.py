@@ -10,7 +10,8 @@ class Kind(Base):
     def action_pluginslist(self, context):
         for target in context['targets']:
             filepath = target['word']
-            installpath = self.vim.command('echo get(g:, "install_plugin_list", "~/list.toml")')
+            self.vim.command('let pluginpath = get(g:, "install_plugin_list", "~/list.toml")')
+            installpath = self.vim.eval("pluginpath")
             self.vim.command('e ' + str(installpath))
             self.vim.command('pclose!')
             self.vim.command('goto 1')
