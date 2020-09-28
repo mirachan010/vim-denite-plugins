@@ -8,12 +8,12 @@ use dein.vim
 ```toml
 [[plugins]]
 repo = 'mirachan010/vim-denite-plugins'
-depentds = ['denite.nvim']
+depends = ['denite.nvim']
 on_source = ['denite.nvim']
 
 [[plugins]]
 repo = 'mirachan010/vim-pluginlist'
-depentds = ['denite.nvim']
+depends = ['denite.nvim']
 on_source = ['vim-denite-plugins']
 ```
 
