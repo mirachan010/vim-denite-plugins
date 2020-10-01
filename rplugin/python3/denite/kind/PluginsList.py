@@ -35,8 +35,5 @@ class Kind(Base):
     def action_preview(self, context):
         for target in context['targets']:
             filepath = target['word']
-            filepath = os.path.normpath(os.path.join(os.path.dirname(__file__), "../../../../../vim-pluginlist/ReadMe/" + str(filepath)))
             self.vim.command('pclose!')
-            self.vim.command('vs')
-            self.vim.command('setl previewwindow')
             self.vim.command('new gh://' + str(filepath) + '/readme')
