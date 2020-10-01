@@ -33,7 +33,7 @@ class Kind(Base):
 
     # def action_PluginsReadme(self, context):
     def action_preview(self, context):
-        self.vim.command('let check_ghvim_for_readme = empty(globpath(&rtp, "autoload/gh.vim"))')
+        self.vim.command('let check_ghvim_for_readme = !empty(globpath(&rtp, "autoload/gh/gh.vim"))')
         check = self.vim.eval("check_ghvim_for_readme")
         for target in context['targets']:
             filepath = target['word']
