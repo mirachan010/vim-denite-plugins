@@ -1,5 +1,5 @@
 from .base import Base
-import os
+import os.path
 
 class Kind(Base):
     def __init__(self, vim):
@@ -11,16 +11,13 @@ class Kind(Base):
         for target in context['targets']:
             filepath = target['word']
             self.vim.command('let pluginpath = get(g:, "install_plugin_list", "~/list.toml")')
-            installpath = self.vim.eval("pluginpath")
-            self.vim.command('e ' + str(installpath))
-            self.vim.command('pclose!')
-            self.vim.command('goto 1')
-            self.vim.command('s /^\[\[plugins\]\]/\r[[plugins]]')
-            self.vim.command('goto 1')
-            self.action_append(context)
-            self.vim.command('s /$/\'')
-            self.vim.command('s /^/[[plugins]]\rrepo = \'')
-            self.vim.command('nohlsearch')
+            installpath = str(self.vim.eval("pluginpath"))
+            installpath = os.path.expanduser(installpath)
+            installfile = open(installpath, 'a', encoding="utf-8")
+            installfile.write("[[plugins]]\n")
+            installfile.write("repo = '"+filepath + "'")
+            installfile.close()
+            self.vim.command('echo '+installpath)
 
     # def action_PluginsReadme(self, context):
     def action_preview(self, context):
