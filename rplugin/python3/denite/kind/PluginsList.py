@@ -17,7 +17,6 @@ class Kind(Base):
             installfile.write("[[plugins]]\n")
             installfile.write("repo = '"+filepath + "'")
             installfile.close()
-            self.vim.command('echo '+installpath)
 
     # def action_PluginsReadme(self, context):
     def action_preview(self, context):
